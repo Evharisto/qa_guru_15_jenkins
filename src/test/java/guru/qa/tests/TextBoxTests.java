@@ -8,14 +8,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
-public class TextBoxTests {
-
-    @BeforeAll
-    static void setUp() {
-        Configuration.baseUrl = "https://demoqa.com";
-        Configuration.browserSize = "1920x1080";
-        //    Configuration.holdBrowserOpen = true;
-    }
+public class TextBoxTests  extends TestBase {
 
     @Test
     void fillFormTest() {

@@ -2,6 +2,7 @@ package guru.qa.tests;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
+import guru.qa.properties.Property;
 import guru.qa.utils.AddAttachments;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
@@ -13,9 +14,12 @@ public class TestBase {
     @BeforeAll
     static void setUp() {
         SelenideLogger.addListener("allure", new AllureSelenide());
+
+        Configuration.browser = Property.browser();
+        Configuration.browserVersion = Property.browserVersion();
+        Configuration.browserSize = Property.browserSize();
         Configuration.baseUrl = "https://demoqa.com";
-        Configuration.browserSize = "1920x1080";
-        //     Configuration.holdBrowserOpen = true;
+
         Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
