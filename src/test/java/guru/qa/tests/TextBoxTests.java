@@ -13,7 +13,7 @@ public class TextBoxTests extends TestBase {
 
     @Test
     void fillFormTest() {
-        Selenide.open("/automation-practice-form");
+        open("/automation-practice-form");
         $("#firstName").setValue("Ivan");
         $("#lastName").setValue("Ivanov");
         $("#userEmail").setValue("ivanivanov@gmail.com");
