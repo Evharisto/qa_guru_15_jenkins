@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
-public class TextBoxTests  extends TestBase {
+public class TextBoxTests extends TestBase {
 
     @Test
     void fillFormTest() {
