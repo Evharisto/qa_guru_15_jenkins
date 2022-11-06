@@ -20,13 +20,13 @@ public class TestBase {
         capabilities.setCapability("enableVideo", true);
 
         Configuration.browserCapabilities = capabilities;
-        Configuration.baseUrl = "https://demoqa.com";
         Configuration.browser = Property.browser();
         Configuration.browserVersion = Property.browserVersion();
         Configuration.browserSize = Property.browserSize();
         if (!Property.remoteUrl().equals("")) {
             Configuration.remote = Property.remoteUrl();
         }
+        Configuration.baseUrl = "https://demoqa.com";
     }
 
     @AfterEach
