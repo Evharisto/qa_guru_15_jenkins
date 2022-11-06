@@ -21,9 +21,9 @@ public class TestBase {
 
         Configuration.browserCapabilities = capabilities;
         Configuration.browser = Property.browser();
-        Configuration.baseUrl = "https://demoqa.com";
-        Configuration.browserVersion = Property.browserVersion();
         Configuration.browserSize = Property.browserSize();
+        Configuration.browserVersion = Property.browserVersion();
+        Configuration.baseUrl = "https://demoqa.com";
         if (!Property.remoteUrl().equals("")) {
             Configuration.remote = Property.remoteUrl();
         }
