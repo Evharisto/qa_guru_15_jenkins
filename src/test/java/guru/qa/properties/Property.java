@@ -7,7 +7,7 @@ public class Property {
     }
 
     public static String browserVersion() {
-        return System.getProperty("browserVersion", "chrome");
+        return System.getProperty("browserVersion", "100");
     }
 
     public static String browserSize() {
